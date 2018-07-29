@@ -1,0 +1,19 @@
+{
+  "name": "doiuse-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "babel-types": "^6.26.0",
+    "babylon": "^6.18.0",
+    "babylon-walk": "^1.0.2",
+    "browserslist": "^4.0.1",
+    "caniuse-lite": "^1.0.30000865"
+  }
+}

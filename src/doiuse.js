@@ -19,7 +19,7 @@ async function scanFile(missingFeatures, filename, printLog) {
 
 	function printUnsupportedFeatures() {
 		for (let featureName in unsupportedFeatures) {
-			console.log(`${chalk.red(featureName)} is not supported in ${chalk.yellow(unsupportedFeatures[featureName].join(','))}`);
+			console.log(`${chalk.red(featureName)} is not supported or fully supported in ${chalk.yellow(unsupportedFeatures[featureName].join(','))}`);
 		}
 	}
 	

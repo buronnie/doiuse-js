@@ -19,7 +19,7 @@ function getMissingFeatures(query) {
 	supportedFeatures.forEach((feature) => {
 		const { stats } = caniuse.feature(caniuse.features[feature]);
 		browsers.forEach(({ name, version }) => {
-			if (!(stats[name] && stats[name][version] === 'y')) {
+			if (!(stats[name] && /(^|\s)y($|\s)/.test(stats[name][version]))) {
 				const browserName = `${name} ${version}`;
 				if (!(feature in missingFeatures)) {
 					missingFeatures[feature] = [browserName];

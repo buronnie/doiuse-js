@@ -38,6 +38,9 @@ async function scanFile(missingFeatures, filename, printLog) {
 }
 
 async function doiuse(query, files, printLog=false) {
+	if (typeof files === 'string') {
+		files = [files];
+	}
 	if (!files || files.length === 0) {
 		return Promise.reject(new Error('No scanned files found!'));
 	}

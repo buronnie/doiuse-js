@@ -1,0 +1,127 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`getBrowsersByQuery should return all browsers whose usage is > 1% 1`] = `
+Array [
+  Object {
+    "name": "and_chr",
+    "version": "67",
+  },
+  Object {
+    "name": "and_uc",
+    "version": "11.8",
+  },
+  Object {
+    "name": "chrome",
+    "version": "67",
+  },
+  Object {
+    "name": "chrome",
+    "version": "66",
+  },
+  Object {
+    "name": "edge",
+    "version": "17",
+  },
+  Object {
+    "name": "firefox",
+    "version": "60",
+  },
+  Object {
+    "name": "ie",
+    "version": "11",
+  },
+  Object {
+    "name": "ios_saf",
+    "version": "11.3-11.4",
+  },
+  Object {
+    "name": "ios_saf",
+    "version": "11.0-11.2",
+  },
+  Object {
+    "name": "op_mini",
+    "version": "all",
+  },
+  Object {
+    "name": "safari",
+    "version": "11.1",
+  },
+  Object {
+    "name": "samsung",
+    "version": "6.2",
+  },
+]
+`;
+
+exports[`getBrowsersByQuery should return ie 10 when the query is ie 10 1`] = `
+Array [
+  Object {
+    "name": "ie",
+    "version": "10",
+  },
+]
+`;
+
+exports[`getMissingFeatures should return all missing features for all browsers whose usage is > 1% 1`] = `
+Object {
+  "arrow-functions": Array [
+    "ie 11",
+    "op_mini all",
+  ],
+  "const": Array [
+    "op_mini all",
+  ],
+  "es6-class": Array [
+    "ie 11",
+    "op_mini all",
+  ],
+  "es6-generators": Array [
+    "ie 11",
+    "op_mini all",
+  ],
+  "es6-module": Array [
+    "and_uc 11.8",
+    "ie 11",
+    "op_mini all",
+    "samsung 6.2",
+  ],
+  "es6-module-dynamic-import": Array [
+    "and_uc 11.8",
+    "edge 17",
+    "firefox 60",
+    "ie 11",
+    "op_mini all",
+    "samsung 6.2",
+  ],
+  "template-literals": Array [
+    "ie 11",
+    "op_mini all",
+  ],
+}
+`;
+
+exports[`getMissingFeatures should return all missing features for ie 10 1`] = `
+Object {
+  "arrow-functions": Array [
+    "ie 10",
+  ],
+  "const": Array [
+    "ie 10",
+  ],
+  "es6-class": Array [
+    "ie 10",
+  ],
+  "es6-generators": Array [
+    "ie 10",
+  ],
+  "es6-module": Array [
+    "ie 10",
+  ],
+  "es6-module-dynamic-import": Array [
+    "ie 10",
+  ],
+  "template-literals": Array [
+    "ie 10",
+  ],
+}
+`;

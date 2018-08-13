@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`doiuse should return all unsupported features for the browsers whose usage > 1% 1`] = `
+Array [
+  Object {
+    "file": "./test/data/fixture1.js",
+    "unsupported_features": Object {
+      "arrow function": Array [
+        "ie 11",
+        "op_mini all",
+      ],
+      "class": Array [
+        "ie 11",
+        "op_mini all",
+      ],
+      "const": Array [
+        "op_mini all",
+      ],
+      "export": Array [
+        "and_uc 11.8",
+        "ie 11",
+        "op_mini all",
+        "samsung 6.2",
+      ],
+      "generator": Array [
+        "ie 11",
+        "op_mini all",
+      ],
+      "import": Array [
+        "and_uc 11.8",
+        "ie 11",
+        "op_mini all",
+        "samsung 6.2",
+      ],
+      "template literal": Array [
+        "ie 11",
+        "op_mini all",
+      ],
+    },
+  },
+]
+`;
+
+exports[`doiuse should support filename as a string 1`] = `
+Array [
+  Object {
+    "file": "./test/data/fixture1.js",
+    "unsupported_features": Object {
+      "arrow function": Array [
+        "ie 11",
+      ],
+      "class": Array [
+        "ie 11",
+      ],
+      "export": Array [
+        "ie 11",
+      ],
+      "generator": Array [
+        "ie 11",
+      ],
+      "import": Array [
+        "ie 11",
+      ],
+      "template literal": Array [
+        "ie 11",
+      ],
+    },
+  },
+]
+`;

@@ -40,7 +40,7 @@ function getMissingFeatures(query) {
 	return missingFeatures;
 }
 
-async function scanFile(query, filename) {
+async function scanFile(query, filename, printLog) {
 	const unsupportedFeatures = {};
 	const missingFeatures = getMissingFeatures(query);
 
@@ -93,18 +93,20 @@ async function scanFile(query, filename) {
 				}
 			});
 
-			printUnsupportedFeatures();
+			if (printLog) {
+				printUnsupportedFeatures();
+			}
 			return unsupportedFeatures;
 		});
 }
 
-async function doiuse(query, files) {
+async function doiuse(query, files, printLog=false) {
 	if (!files || files.length === 0) {
 		return Promise.reject(new Error('No scanned files found!'));
 	}
 
 	return Promise.all(files.map(file => {
-		return scanFile(query, file).then((unsupportedFeatures) => {
+		return scanFile(query, file, printLog).then((unsupportedFeatures) => {
 			return {
 				file,
 				unsupported_features: unsupportedFeatures,

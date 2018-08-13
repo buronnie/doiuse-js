@@ -8,5 +8,4 @@ program
 	.option('-b, --browserslist <query>', 'set browserslist query')
 	.parse(process.argv)
 
-doiuse(program.browserslist, program.args)
-	.then(data => console.dir(data));
+doiuse(program.browserslist, program.args, true);
